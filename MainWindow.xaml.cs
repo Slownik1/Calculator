@@ -25,102 +25,23 @@ namespace Calculator
         string tmp = String.Empty;
         List<string> numbers = new List<string>();
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            tmp +=0;
-            view.Content = tmp;
-        }
-
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            tmp += 1;
+            Button b = (Button)sender;
+            tmp += b.Content.ToString();
             view.Content = tmp;
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void Clear(object sender, RoutedEventArgs e)
         {
-            tmp += 2;
-            view.Content = tmp;
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            tmp += 3;
-            view.Content = tmp;
-        } 
-
-        private void Button_Click_5(object sender, RoutedEventArgs e)
-        {
-            tmp += 5;
-            view.Content = tmp;
-        }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-            tmp += 4;
-            view.Content = tmp;
-        }
-        private void Click6(object sender, RoutedEventArgs e)
-        {
-            tmp += 6;
-            view.Content = tmp;
-        }
-
-        private void Button_Click_6(object sender, RoutedEventArgs e)
-        {
-            tmp += 7;
-            view.Content = tmp;
-        }
-
-        private void Button_Click_7(object sender, RoutedEventArgs e)
-        {
-            tmp += 8;
-            view.Content = tmp;
-        }
-
-        private void Button_Click_8(object sender, RoutedEventArgs e)
-        {
-            tmp += 9;
-            view.Content = tmp;
-        }
-
-        private void Button_Click_10(object sender, RoutedEventArgs e)
-        {
-            tmp += ',';
-            view.Content = tmp;
-        }
-
-        private void Button_Click_9(object sender, RoutedEventArgs e)
-        {
+            Button b = (Button)sender;
             tmp = String.Empty;
-            view.Content = tmp;
+            view.Content = String.Empty;
         }
 
-        private void Button_Click_12(object sender, RoutedEventArgs e)
-        {
-            tmp += '+';
-            view.Content = tmp;
-        }
+        
 
-        private void Button_Click_13(object sender, RoutedEventArgs e)
-        {
-            tmp += '-';
-            view.Content = tmp;
-        }
-
-        private void Button_Click_14(object sender, RoutedEventArgs e)
-        {
-            tmp += '/';
-            view.Content = tmp;
-        }
-
-        private void Button_Click_15(object sender, RoutedEventArgs e)
-        {
-            tmp += 'x';
-            view.Content = tmp;
-        }
-
-        private void Button_Click_11(object sender, RoutedEventArgs e)
+        private void Results(object sender, RoutedEventArgs e)
         {
             int length = tmp.Length;
             double results;
